@@ -1,15 +1,18 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-21 15:37:05
- * @LastEditTime: 2022-09-21 20:50:51
- * @FilePath: /CPPprojects/Leetcode/DataStructure_PolyU/Queue_and_Stack/myStack.h
+ * @LastEditTime: 2022-09-22 15:03:46
+ * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Queue_and_Stack/myStack.h
  * @Description: a simple definition of stack
  */
 #ifndef _MYSTACK_H_J
 #define _MYSTACK_H_J
 #include "LinkNode.h"
 
-//using namespace gzx_simple_stl;
+/*
+    Robert PPT是表示可以一直Push，直到没内存空间才算放满。。。
+    个人感觉没必要，就擅自加了capacity来管理空间大小
+*/
 
 namespace gzx_simple_stl{
     template<typename T>

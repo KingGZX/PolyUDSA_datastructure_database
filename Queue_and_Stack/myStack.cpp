@@ -1,8 +1,8 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-21 16:00:28
- * @LastEditTime: 2022-09-21 21:43:53
- * @FilePath: /CPPprojects/Leetcode/DataStructure_PolyU/Queue_and_Stack/myStack.cpp
+ * @LastEditTime: 2022-09-22 13:11:55
+ * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Queue_and_Stack/myStack.cpp
  * @Description: Please implement
  */
 #ifndef _MYSTACK_CPP_J
@@ -100,6 +100,7 @@ namespace gzx_simple_stl{
             _top = _top->next;
             delete tempPtr;
         }
+        _capacity = _maximum;
     }
 
     /**
