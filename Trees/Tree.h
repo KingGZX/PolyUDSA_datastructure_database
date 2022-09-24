@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:41:38
- * @LastEditTime: 2022-09-24 16:38:43
+ * @LastEditTime: 2022-09-24 20:17:17
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/Tree.h
  * @Description: a simple definition of tree
  */
@@ -19,7 +19,7 @@ namespace gzx_simple_datastructure{
     template<typename T>
     class Tree
     {
-    private:
+    protected:
         TreeNode<T>* _root;
     public:
         Tree();
@@ -30,7 +30,7 @@ namespace gzx_simple_datastructure{
         void inOrderTraverse(TreeNode<T>* root);
         void postOrderTraverse(TreeNode<T>* root);
         TreeNode<T>* getRoot();
-        ~Tree();
+        virtual ~Tree();
     };
 };
 

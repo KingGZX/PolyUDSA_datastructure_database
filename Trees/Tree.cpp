@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:41:15
- * @LastEditTime: 2022-09-24 16:38:37
+ * @LastEditTime: 2022-09-24 20:29:25
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/Tree.cpp
  * @Description: a implementation of tree
  */
@@ -13,16 +13,23 @@
 
 #include "Tree.h"
 namespace gzx_simple_datastructure{
+    /**
+     * @description: 三个构造函数这次加了点输出提示，可以debug看看继承后构造有没有出什么问题  ----  析构函数同理
+     * @event: null
+     * @return null
+     */    
     template<typename T>
     Tree<T>::Tree()
     {
         _root = nullptr;
+        cout << "create tree object by set root to nullptr\n";
     }
 
     template<typename T>
     Tree<T>::Tree(TreeNode<T>* root)
     {
         _root = root;
+        cout << "create tree object by set root to the parameter root\n";
     }
 
     template<typename T>
@@ -32,6 +39,7 @@ namespace gzx_simple_datastructure{
         // 下标为0的就设置为根节点，然后下标1为0的左孩子，2就是0的右孩子。  接着3又是1的左孩子 ......
         size_t initptr = 0;
         _root = createTreeByVector(vec, initptr);
+        cout << "create tree object by vector\n";
     }
 
     template<typename T>
@@ -83,6 +91,12 @@ namespace gzx_simple_datastructure{
             postOrderTraverse(root->rightchild);
             cout << root->_data;
         }
+    }
+
+    template<typename T>
+    Tree<T>::~Tree()
+    {
+        cout << "delete tree object\n";
     }
 };
 
