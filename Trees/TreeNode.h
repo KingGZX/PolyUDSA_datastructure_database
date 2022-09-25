@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:40:45
- * @LastEditTime: 2022-09-24 16:12:53
+ * @LastEditTime: 2022-09-25 14:24:34
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/TreeNode.h
  * @Description: A simple definition of treenode
  */
@@ -24,7 +24,7 @@ namespace gzx_simple_datastructure{
         TreeNode<T>* operator=(TreeNode<T>* node){
             this->_data = node->_data;
             this->siblings = node->siblings;
-            this->leftcihld = node->leftcihld;
+            this->leftchild = node->leftchild;
             this->rightchild = node->rightchild;
             this->parent = node->parent;
             return this;

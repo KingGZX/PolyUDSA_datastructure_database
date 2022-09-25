@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:42:05
- * @LastEditTime: 2022-09-24 20:26:08
+ * @LastEditTime: 2022-09-25 14:37:44
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/test.cpp
  * @Description: Please implement
  */
@@ -27,6 +27,36 @@ void test_binarysearch_tree()
     // 建立二叉搜索树，并利用中序遍历，可以发现输出了有序的插入数组(就是构造用的那个数组)
     bst->inOrderTraverse(root);
     cout << endl;
+    
+    // 二叉搜索树的搜索，插入，findMax，findMin和delete的测试
+    // 1. 插入
+    cout << "---------- inserting 5 into the tree ----------\n";
+    bst->createTreeByVectorRecursive(root, 5);
+    bst->inOrderTraverse(root);
+    cout << endl;
+
+    // 2.找最大最小
+    cout << "the biggest element in the tree is: " << bst->findMax() << endl;
+    cout << "the smallest element in the tree is: " << bst->findMin() << endl;
+
+    // 3.搜索
+    int data = 9;
+    cout << "9 is in the tree ? " << boolalpha << bst->Search(data) << endl;
+    data = 4;
+    cout << "4 is in the tree ? " << boolalpha << bst->Search(data) << endl;
+
+    // 4. 删除
+    // 删除前可以先行判断一些这个值有没有在树中
+    data = 4;
+    if(bst->Search(data))
+    {
+        bst->DeleteNode(data);
+        cout << "----------After deleting value " << data << " ,the binary search tree become----------\n";
+        bst->inOrderTraverse(root);
+        cout << endl;
+    }
+    else cout << "The Key Value is not in the tree, cannot delete!" << endl;
+
     delete bst;
 }
 
@@ -51,10 +81,16 @@ void test_tree_traverse()
     cout << "Postrder Traverse: ";
     tree->postOrderTraverse(root);
     cout << endl;
+
+    delete tree;
 }
 
 int main(){
-    //test_tree_traverse();
+    cout << "--------start testing--------\n";
+    test_tree_traverse();
+    cout << "----------seperator----------\n";
     test_binarysearch_tree();
+    cout << "----------seperator----------\n";
+    cout << "After testing, it's verified!\n";
     return 0;
 }

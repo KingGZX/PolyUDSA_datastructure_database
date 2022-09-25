@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:41:38
- * @LastEditTime: 2022-09-24 20:17:17
+ * @LastEditTime: 2022-09-25 14:05:25
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/Tree.h
  * @Description: a simple definition of tree
  */
