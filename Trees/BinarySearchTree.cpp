@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-09-23 23:41:59
- * @LastEditTime: 2022-09-25 14:40:38
+ * @LastEditTime: 2022-10-12 11:28:49
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Trees/BinarySearchTree.cpp
  * @Description: a simple implementation of tree
  */
@@ -41,7 +41,7 @@ namespace gzx_simple_datastructure{
             else
             {
                 cout << "The element " << data << " has been in the tree, do not insert!" << endl;
-                return nullptr;
+                return root;
             }
         }
         return root;
