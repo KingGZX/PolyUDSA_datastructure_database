@@ -1,7 +1,7 @@
 /*
  * @author: Zhexuan Gu
  * @Date: 2022-10-12 12:53:15
- * @LastEditTime: 2022-10-12 13:31:08
+ * @LastEditTime: 2022-10-12 15:06:11
  * @FilePath: /CPPprojects/PolyU_DSA_datastructure_database/Search/BinarySearch.h
  * @Description: Please implement
  */
